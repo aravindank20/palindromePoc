@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserResponse.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rest</a> &gt; <a href="index.source.html" class="el_package">com.aravindan.palindromepoc.model</a> &gt; <span class="el_source">UserResponse.java</span></div><h1>UserResponse.java</h1><pre class="source lang-java linenums">package com.aravindan.palindromepoc.model;
+
+/**
+ * This class is to form the user response for palindrome check
+ *
+ * @author Aravindan Kalaiselvan
+ *
+ */
+public class UserResponse {
+    private String userName;
+    private String txtToCheck;
+    private String response;
+
+    /**
+     * used constructor to pass the response values
+     * @param userName just for logging
+     * @param txtToCheck palindrome word
+     * @param response is true if palindrome or else false
+     */
+<span class="fc" id="L20">    public UserResponse(String userName, String txtToCheck, String response){</span>
+<span class="fc" id="L21">        this.userName= userName;</span>
+<span class="fc" id="L22">        this.txtToCheck= txtToCheck;</span>
+<span class="fc" id="L23">        this.response = response;</span>
+<span class="fc" id="L24">    }</span>
+
+    /**
+     * This will be the final JSON output
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L31">        return &quot;{\&quot;userName\&quot;:\&quot;&quot;+this.userName+&quot;\&quot;,\&quot;txtToCheck\&quot;:\&quot;&quot;+this.txtToCheck+&quot;\&quot;,\&quot;response\&quot;:\&quot;&quot;+this.response+&quot;\&quot;}&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

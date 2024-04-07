@@ -1,0 +1,360 @@
+2024-04-06 18:08:15 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 18:08:15 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:12:17 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 18:12:17 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 5503 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 18:12:17 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 18:12:18 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-04-06 18:12:18 [main] INFO  : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-04-06 18:12:18 [main] INFO  : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2024-04-06 18:12:18 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 18:12:18 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:12:18 [main] INFO  : Starting service [Tomcat]
+2024-04-06 18:12:18 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 18:12:18 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 18:12:18 [main] INFO  : Root WebApplicationContext: initialization completed in 615 ms
+2024-04-06 18:12:18 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:12:18 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 18:12:18 [main] INFO  : Started RestApplication in 1.2 seconds (process running for 1.438)
+2024-04-06 18:12:24 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 18:12:24 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 18:12:24 [http-nio-8081-exec-1] INFO  : Completed initialization in 1 ms
+2024-04-06 18:12:24 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - madam by user - John Doe
+2024-04-06 18:12:24 [http-nio-8081-exec-1] INFO  : going to check the word -madam whether it is palindrome or not 
+2024-04-06 18:12:24 [http-nio-8081-exec-1] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis] with root cause
+io.lettuce.core.protocol.RedisProtocolException: Invalid first byte: 72 (H) at buffer index 1 decoding using null
+	at io.lettuce.core.protocol.RedisStateMachine.readReplyType(RedisStateMachine.java:633)
+	at io.lettuce.core.protocol.RedisStateMachine.doDecode(RedisStateMachine.java:349)
+	at io.lettuce.core.protocol.RedisStateMachine.decode(RedisStateMachine.java:319)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:840)
+	at io.lettuce.core.protocol.CommandHandler.decode0(CommandHandler.java:791)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:774)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:657)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:597)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-04-06 18:16:13 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 18:16:13 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:16:35 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 18:16:35 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 5550 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 18:16:35 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 18:16:35 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-04-06 18:16:35 [main] INFO  : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-04-06 18:16:35 [main] INFO  : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2024-04-06 18:16:35 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 18:16:35 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:16:35 [main] INFO  : Starting service [Tomcat]
+2024-04-06 18:16:35 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 18:16:35 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 18:16:35 [main] INFO  : Root WebApplicationContext: initialization completed in 609 ms
+2024-04-06 18:16:36 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:16:36 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 18:16:36 [main] INFO  : Started RestApplication in 1.187 seconds (process running for 1.429)
+2024-04-06 18:17:27 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 18:17:27 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 18:17:27 [http-nio-8081-exec-1] INFO  : Completed initialization in 1 ms
+2024-04-06 18:17:27 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - madam by user - John Doe
+2024-04-06 18:17:27 [http-nio-8081-exec-1] INFO  : going to check the word -madam whether it is palindrome or not 
+2024-04-06 18:17:27 [http-nio-8081-exec-1] ERROR : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis] with root cause
+io.lettuce.core.protocol.RedisProtocolException: Invalid first byte: 72 (H) at buffer index 1 decoding using null
+	at io.lettuce.core.protocol.RedisStateMachine.readReplyType(RedisStateMachine.java:633)
+	at io.lettuce.core.protocol.RedisStateMachine.doDecode(RedisStateMachine.java:349)
+	at io.lettuce.core.protocol.RedisStateMachine.decode(RedisStateMachine.java:319)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:840)
+	at io.lettuce.core.protocol.CommandHandler.decode0(CommandHandler.java:791)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:774)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:657)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:597)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-04-06 18:17:52 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 18:17:52 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:24:55 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 18:24:55 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 5613 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 18:24:55 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 18:24:55 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 18:24:55 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:24:55 [main] INFO  : Starting service [Tomcat]
+2024-04-06 18:24:55 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 18:24:55 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 18:24:55 [main] INFO  : Root WebApplicationContext: initialization completed in 494 ms
+2024-04-06 18:24:55 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 18:24:55 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 18:24:55 [main] INFO  : Started RestApplication in 0.906 seconds (process running for 1.128)
+2024-04-06 18:25:00 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 18:25:00 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 18:25:00 [http-nio-8081-exec-1] INFO  : Completed initialization in 1 ms
+2024-04-06 18:25:00 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - madam by user - John Doe
+2024-04-06 18:25:00 [http-nio-8081-exec-1] INFO  : going to check the word -madam whether it is palindrome or not 
+2024-04-06 18:25:00 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for madam
+2024-04-06 18:25:14 [http-nio-8081-exec-2] INFO  : Received request to check palindrome on word - madam by user - John Doe
+2024-04-06 18:25:14 [http-nio-8081-exec-2] INFO  : going to check the word -madam whether it is palindrome or not 
+2024-04-06 18:25:47 [http-nio-8081-exec-3] INFO  : Received request to check palindrome on word - madam by user - John Doe
+2024-04-06 18:25:47 [http-nio-8081-exec-3] INFO  : going to check the word -madam whether it is palindrome or not 
+2024-04-06 18:26:04 [http-nio-8081-exec-4] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 18:26:04 [http-nio-8081-exec-4] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 18:26:04 [http-nio-8081-exec-4] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 18:26:12 [http-nio-8081-exec-5] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 18:26:12 [http-nio-8081-exec-5] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 18:26:27 [http-nio-8081-exec-7] INFO  : Received request to check palindrome on word - kayakk by user - John Doe
+2024-04-06 18:26:27 [http-nio-8081-exec-7] INFO  : going to check the word -kayakk whether it is palindrome or not 
+2024-04-06 18:26:27 [http-nio-8081-exec-7] INFO  : Not in cache so going to do the check for kayakk
+2024-04-06 18:26:31 [http-nio-8081-exec-8] INFO  : Received request to check palindrome on word - kayakk by user - John Doe
+2024-04-06 18:26:31 [http-nio-8081-exec-8] INFO  : going to check the word -kayakk whether it is palindrome or not 
+2024-04-06 19:36:10 [RMI TCP Connection(6)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 19:36:10 [RMI TCP Connection(6)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:36:13 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 19:36:13 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 5998 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 19:36:13 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 19:36:13 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 19:36:13 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:36:13 [main] INFO  : Starting service [Tomcat]
+2024-04-06 19:36:13 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 19:36:13 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 19:36:13 [main] INFO  : Root WebApplicationContext: initialization completed in 433 ms
+2024-04-06 19:36:13 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:36:13 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 19:36:13 [main] INFO  : Started RestApplication in 0.867 seconds (process running for 1.124)
+2024-04-06 19:36:23 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 19:36:23 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 19:36:23 [http-nio-8081-exec-1] INFO  : Completed initialization in 0 ms
+2024-04-06 19:36:23 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayakk by user - John Doe
+2024-04-06 19:36:23 [http-nio-8081-exec-1] INFO  : going to check the word -kayakk whether it is palindrome or not 
+2024-04-06 19:36:23 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayakk
+2024-04-06 19:39:31 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 19:39:31 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:47:11 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 19:47:11 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6068 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 19:47:11 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 19:47:12 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 19:47:12 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:47:12 [main] INFO  : Starting service [Tomcat]
+2024-04-06 19:47:12 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 19:47:12 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 19:47:12 [main] INFO  : Root WebApplicationContext: initialization completed in 447 ms
+2024-04-06 19:47:12 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:47:12 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 19:47:12 [main] INFO  : Started RestApplication in 0.86 seconds (process running for 1.084)
+2024-04-06 19:47:21 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 19:47:21 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 19:47:21 [http-nio-8081-exec-1] INFO  : Completed initialization in 1 ms
+2024-04-06 19:47:21 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayakk by user - John Doe
+2024-04-06 19:47:21 [http-nio-8081-exec-1] INFO  : going to check the word -kayakk whether it is palindrome or not 
+2024-04-06 19:47:21 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayakk
+2024-04-06 19:47:21 [http-nio-8081-exec-1] INFO  : storing kayakkin JSON file for future reference
+2024-04-06 19:58:03 [RMI TCP Connection(6)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 19:58:03 [RMI TCP Connection(6)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:58:17 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 19:58:17 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6139 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 19:58:17 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 19:58:18 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 19:58:18 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:58:18 [main] INFO  : Starting service [Tomcat]
+2024-04-06 19:58:18 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 19:58:18 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 19:58:18 [main] INFO  : Root WebApplicationContext: initialization completed in 475 ms
+2024-04-06 19:58:18 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 19:58:18 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 19:58:18 [main] INFO  : Started RestApplication in 0.893 seconds (process running for 1.12)
+2024-04-06 19:58:26 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 19:58:26 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 19:58:26 [http-nio-8081-exec-1] INFO  : Completed initialization in 1 ms
+2024-04-06 19:58:26 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayakk by user - John Doe
+2024-04-06 19:58:26 [http-nio-8081-exec-1] INFO  : going to check the word -kayakk whether it is palindrome or not 
+2024-04-06 19:58:26 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayakk
+2024-04-06 19:58:26 [http-nio-8081-exec-1] INFO  : storing kayakkin JSON file for future reference
+2024-04-06 19:58:26 [http-nio-8081-exec-1] ERROR : [Ljava.lang.StackTraceElement;@516670d0
+2024-04-06 19:58:27 [http-nio-8081-exec-2] INFO  : Received request to check palindrome on word - kayakk by user - John Doe
+2024-04-06 19:58:27 [http-nio-8081-exec-2] INFO  : going to check the word -kayakk whether it is palindrome or not 
+2024-04-06 19:58:33 [http-nio-8081-exec-3] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 19:58:33 [http-nio-8081-exec-3] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 19:58:33 [http-nio-8081-exec-3] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 19:58:33 [http-nio-8081-exec-3] INFO  : storing kayakin JSON file for future reference
+2024-04-06 19:58:33 [http-nio-8081-exec-3] ERROR : [Ljava.lang.StackTraceElement;@239508ea
+2024-04-06 23:28:21 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 23:28:21 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:28:38 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:28:38 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6265 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 23:28:38 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:28:38 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 23:28:38 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:28:38 [main] INFO  : Starting service [Tomcat]
+2024-04-06 23:28:38 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 23:28:38 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 23:28:38 [main] INFO  : Root WebApplicationContext: initialization completed in 459 ms
+2024-04-06 23:28:38 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:28:38 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 23:28:38 [main] INFO  : Started RestApplication in 0.867 seconds (process running for 1.092)
+2024-04-06 23:28:47 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 23:28:47 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 23:28:47 [http-nio-8081-exec-1] INFO  : Completed initialization in 1 ms
+2024-04-06 23:28:47 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 23:28:47 [http-nio-8081-exec-1] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 23:28:47 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 23:28:47 [http-nio-8081-exec-1] INFO  : storing kayakin JSON file for future reference
+2024-04-06 23:28:47 [http-nio-8081-exec-1] ERROR : [Ljava.lang.StackTraceElement;@62fd0d32
+2024-04-06 23:30:10 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 23:30:10 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:30:26 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:30:26 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6278 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 23:30:26 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:30:26 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 23:30:26 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:30:26 [main] INFO  : Starting service [Tomcat]
+2024-04-06 23:30:26 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 23:30:26 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 23:30:26 [main] INFO  : Root WebApplicationContext: initialization completed in 456 ms
+2024-04-06 23:30:26 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:30:26 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 23:30:26 [main] INFO  : Started RestApplication in 0.864 seconds (process running for 1.136)
+2024-04-06 23:30:33 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 23:30:33 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 23:30:33 [http-nio-8081-exec-1] INFO  : Completed initialization in 0 ms
+2024-04-06 23:30:33 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 23:30:33 [http-nio-8081-exec-1] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 23:30:33 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 23:30:33 [http-nio-8081-exec-1] INFO  : storing kayakin JSON file for future reference
+2024-04-06 23:30:33 [http-nio-8081-exec-1] ERROR : [Ljava.lang.StackTraceElement;@29cff010
+2024-04-06 23:30:42 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 23:30:42 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:30:57 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:30:57 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6297 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 23:30:57 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:30:57 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 23:30:57 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:30:57 [main] INFO  : Starting service [Tomcat]
+2024-04-06 23:30:57 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 23:30:57 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 23:30:57 [main] INFO  : Root WebApplicationContext: initialization completed in 364 ms
+2024-04-06 23:30:57 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:30:57 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 23:30:57 [main] INFO  : Started RestApplication in 0.726 seconds (process running for 0.844)
+2024-04-06 23:31:08 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 23:31:08 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 23:31:08 [http-nio-8081-exec-1] INFO  : Completed initialization in 0 ms
+2024-04-06 23:31:08 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 23:31:08 [http-nio-8081-exec-1] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 23:31:08 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 23:31:08 [http-nio-8081-exec-1] INFO  : storing kayak in JSON file for future reference
+2024-04-06 23:31:08 [http-nio-8081-exec-1] ERROR : [Ljava.lang.StackTraceElement;@63f65bf7
+2024-04-06 23:31:52 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:31:52 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6314 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 23:31:52 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:31:53 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 23:31:53 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:31:53 [main] INFO  : Starting service [Tomcat]
+2024-04-06 23:31:53 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 23:31:53 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 23:31:53 [main] INFO  : Root WebApplicationContext: initialization completed in 450 ms
+2024-04-06 23:31:53 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:31:53 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-04-06 23:31:53 [main] INFO  : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-06 23:31:53 [main] ERROR : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2024-04-06 23:32:21 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:32:21 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6326 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 23:32:21 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:32:21 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 23:32:21 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:32:21 [main] INFO  : Starting service [Tomcat]
+2024-04-06 23:32:21 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 23:32:21 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 23:32:21 [main] INFO  : Root WebApplicationContext: initialization completed in 549 ms
+2024-04-06 23:32:22 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:32:22 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 23:32:22 [main] INFO  : Started RestApplication in 1.014 seconds (process running for 1.245)
+2024-04-06 23:32:30 [http-nio-8081-exec-2] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 23:32:30 [http-nio-8081-exec-2] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 23:32:30 [http-nio-8081-exec-2] INFO  : Completed initialization in 0 ms
+2024-04-06 23:32:30 [http-nio-8081-exec-2] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 23:32:30 [http-nio-8081-exec-2] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 23:32:30 [http-nio-8081-exec-2] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 23:32:30 [http-nio-8081-exec-2] INFO  : storing kayak in JSON file for future reference
+2024-04-06 23:32:30 [http-nio-8081-exec-2] ERROR : java.io.FileNotFoundException: resources/palindrome.json (No such file or directory)
+2024-04-06 23:33:29 [RMI TCP Connection(4)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 23:33:29 [RMI TCP Connection(4)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:35:35 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:35:35 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6364 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 23:35:35 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:35:35 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 23:35:35 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:35:35 [main] INFO  : Starting service [Tomcat]
+2024-04-06 23:35:35 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 23:35:35 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 23:35:35 [main] INFO  : Root WebApplicationContext: initialization completed in 462 ms
+2024-04-06 23:35:35 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:35:35 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 23:35:35 [main] INFO  : Started RestApplication in 0.873 seconds (process running for 1.103)
+2024-04-06 23:35:48 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 23:35:48 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 23:35:48 [http-nio-8081-exec-1] INFO  : Completed initialization in 0 ms
+2024-04-06 23:35:48 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 23:35:48 [http-nio-8081-exec-1] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 23:35:48 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 23:35:48 [http-nio-8081-exec-1] INFO  : storing kayak in JSON file for future reference
+2024-04-06 23:36:04 [http-nio-8081-exec-2] INFO  : Received request to check palindrome on word - kayakk by user - John Doe
+2024-04-06 23:36:04 [http-nio-8081-exec-2] INFO  : going to check the word -kayakk whether it is palindrome or not 
+2024-04-06 23:36:04 [http-nio-8081-exec-2] INFO  : Not in cache so going to do the check for kayakk
+2024-04-06 23:36:04 [http-nio-8081-exec-2] INFO  : storing kayakk in JSON file for future reference
+2024-04-06 23:37:51 [RMI TCP Connection(6)-127.0.0.1] INFO  : Application shutdown requested.
+2024-04-06 23:37:51 [RMI TCP Connection(6)-127.0.0.1] INFO  : Stopping ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:38:31 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.1.Final
+2024-04-06 23:38:31 [main] INFO  : Starting RestApplication using Java 17.0.10 with PID 6424 (/Volumes/Aravindan/work/rest/target/classes started by aravindan in /Volumes/Aravindan/work/rest)
+2024-04-06 23:38:31 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-04-06 23:38:31 [main] INFO  : Tomcat initialized with port 8081 (http)
+2024-04-06 23:38:31 [main] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:38:31 [main] INFO  : Starting service [Tomcat]
+2024-04-06 23:38:31 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-06 23:38:31 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-04-06 23:38:31 [main] INFO  : Root WebApplicationContext: initialization completed in 498 ms
+2024-04-06 23:38:31 [main] INFO  : Starting ProtocolHandler ["http-nio-8081"]
+2024-04-06 23:38:31 [main] INFO  : Tomcat started on port 8081 (http) with context path ''
+2024-04-06 23:38:31 [main] INFO  : Started RestApplication in 0.935 seconds (process running for 1.153)
+2024-04-06 23:38:37 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 23:38:37 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-04-06 23:38:37 [http-nio-8081-exec-1] INFO  : Completed initialization in 1 ms
+2024-04-06 23:38:37 [http-nio-8081-exec-1] INFO  : Received request to check palindrome on word - kayak by user - John Doe
+2024-04-06 23:38:37 [http-nio-8081-exec-1] INFO  : going to check the word -kayak whether it is palindrome or not 
+2024-04-06 23:38:37 [http-nio-8081-exec-1] INFO  : Not in cache so going to do the check for kayak
+2024-04-06 23:38:37 [http-nio-8081-exec-1] INFO  : storing kayak in JSON file for future reference

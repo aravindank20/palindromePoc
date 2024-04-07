@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PalindromeInput.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rest</a> &gt; <a href="index.source.html" class="el_package">com.aravindan.palindromepoc.model</a> &gt; <span class="el_source">PalindromeInput.java</span></div><h1>PalindromeInput.java</h1><pre class="source lang-java linenums">package com.aravindan.palindromepoc.model;
+
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
+import lombok.Getter;
+
+/**
+ * PalindromeInput to match the requestBody on post http requests
+ *
+ * @author Aravindan Kalaiselvan
+ *
+ */
+public class PalindromeInput {
+
+<span class="fc" id="L15">    @Getter</span>
+    @NotEmpty(message = &quot;Username cannot be null or empty&quot;)
+    private String userName;
+
+<span class="fc" id="L19">    @Getter</span>
+    @NotEmpty(message = &quot;txtToCheck cannot be null or empty&quot;)
+    @Pattern(regexp = &quot;^[A-Za-z]*$&quot;, message = &quot;txtToCheck should contain only alphabets&quot;)
+    private String txtToCheck;
+
+    /**
+     * used constructor only for unit test cases
+     * @param userName just for logging
+     * @param txtToCheck palindrome word
+     */
+<span class="fc" id="L29">    public PalindromeInput(String userName, String txtToCheck) {</span>
+<span class="fc" id="L30">        this.userName = userName;</span>
+<span class="fc" id="L31">        this.txtToCheck = txtToCheck;</span>
+<span class="fc" id="L32">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

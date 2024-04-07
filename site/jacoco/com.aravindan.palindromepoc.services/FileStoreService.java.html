@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileStoreService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rest</a> &gt; <a href="index.source.html" class="el_package">com.aravindan.palindromepoc.services</a> &gt; <span class="el_source">FileStoreService.java</span></div><h1>FileStoreService.java</h1><pre class="source lang-java linenums">package com.aravindan.palindromepoc.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.cache.CacheManager;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+/**
+ * This class is to store the palindrome word &amp; the response to file
+ *  - retrieve it from the file during spring start up and put it on cache
+ *
+ * @author Aravindan Kalaiselvan
+ *
+ */
+@Service
+@Component
+<span class="fc" id="L24">public class FileStoreService implements StorageService, CommandLineRunner {</span>
+
+    @Autowired
+    LoggingService loggingService;
+
+    @Value(&quot;${palindrome.name}&quot;)
+    private String palindromeFile;
+
+<span class="fc" id="L32">    private static final String NEWLINEREGEX = System.getProperty(&quot;line.separator&quot;);</span>
+
+    @Autowired
+    private CacheManager cacheManager;
+
+    /**
+     * This is to save the word and response to the file storage
+     * @param txtToCheck palindrome word
+     * @param isPalindrome is true if palindrome or else false
+     */
+    @Override
+    public void save(String txtToCheck, Boolean isPalindrome) {
+<span class="fc" id="L44">        FileWriter file = null;</span>
+        try {
+<span class="fc" id="L46">            loggingService.logInfo(&quot;storing &quot; +  txtToCheck + &quot; in file for future reference&quot;);</span>
+            // File path is passed as parameter with append true
+<span class="fc" id="L48">            file = new FileWriter(palindromeFile,true);</span>
+<span class="fc" id="L49">            file.write(txtToCheck+&quot;-&quot;+isPalindrome+ NEWLINEREGEX);</span>
+<span class="fc" id="L50">            file.close();</span>
+<span class="nc" id="L51">        } catch (Exception e) {</span>
+<span class="nc" id="L52">            loggingService.logError(String.valueOf(e));</span>
+<span class="fc" id="L53">        }</span>
+
+<span class="fc" id="L55">    }</span>
+
+    /**
+     * This will retrieve the palindrome word and response from file storage
+     * And store it in cache
+     */
+    @Override
+    public void getAvlPalindromeLst() {
+<span class="fc" id="L63">        loggingService.logInfo(&quot;updating the palindrome cache if the file has contents&quot;);</span>
+        // File path is passed as parameter
+<span class="fc" id="L65">        File file = new File(palindromeFile);</span>
+<span class="pc bpc" id="L66" title="1 of 4 branches missed.">        if(file.exists() &amp;&amp; file.length() &gt; 0) {</span>
+<span class="fc" id="L67">            BufferedReader br = null;</span>
+            try {
+<span class="fc" id="L69">                br = new BufferedReader(new FileReader(file));</span>
+                String palindromeTxt;
+<span class="fc bfc" id="L71" title="All 2 branches covered.">                while ((palindromeTxt = br.readLine()) != null){</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">                    if(!palindromeTxt.isEmpty()){</span>
+<span class="fc" id="L73">                        String[] result = palindromeTxt.split(&quot;-&quot;);</span>
+                        // below will update the word in cache
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">                        if(cacheManager.getCache(&quot;palindrome&quot;)!=null){</span>
+<span class="fc" id="L76">                            cacheManager.getCache(&quot;palindrome&quot;).put(result[0], Boolean.valueOf(result[1]));</span>
+                        }
+
+<span class="fc" id="L79">                    }</span>
+                }
+<span class="nc" id="L81">            } catch (Exception e) {</span>
+<span class="nc" id="L82">                loggingService.logError(String.valueOf(e));</span>
+<span class="fc" id="L83">            }</span>
+<span class="fc" id="L84">        } else {</span>
+<span class="fc" id="L85">            loggingService.logInfo(&quot;palindrome cache failed file not available or empty&quot;);</span>
+        }
+<span class="fc" id="L87">    }</span>
+
+    @Override
+    public void run(String... args) throws Exception {
+<span class="fc" id="L91">        getAvlPalindromeLst();</span>
+<span class="fc" id="L92">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

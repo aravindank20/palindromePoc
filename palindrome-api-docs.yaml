@@ -1,0 +1,47 @@
+openapi: 3.0.1
+info:
+  title: Palindrome POC
+  version: v0
+servers:
+- url: http://localhost:8081/poc/checkPalindrome
+  description: Palindrome POC Checker url
+paths:
+  /poc/checkPalindrome:
+    post:
+      tags:
+      - user-controller
+      operationId: checkPalindrome
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PalindromeInput'
+        required: true
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+components:
+  schemas:
+    PalindromeInput:
+      required:
+      - txtToCheck
+      - userName
+      type: object
+      properties:
+        userName:
+          type: string
+        txtToCheck:
+          pattern: "^[A-Za-z]*$"
+          type: string
