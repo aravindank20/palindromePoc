@@ -40,7 +40,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  *
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(properties = { "palindrome.json.name=palindromeTest.txt" })
+@SpringBootTest(properties = { "palindrome.name=palindromeTest.txt" })
 @AutoConfigureMockMvc
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserControllerTest {
